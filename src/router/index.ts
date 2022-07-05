@@ -9,13 +9,13 @@ const routes: RouteRecordRaw[] = [
     path: '/home',
     name: 'home',
     component: () => import('@/views/home/home.vue'),
-    // children: [
-    //   {
-    //     path: '/Agency',
-    //     name: 'Agency',
-    //     component: () => import('@/views/agency/agency.vue'),
-    //   },
-    // ],
+    children: [
+      {
+        path: '/Agency',
+        name: 'Agency',
+        component: () => import('@/views/agency/agency.vue'),
+      },
+    ],
   },
 ];
 

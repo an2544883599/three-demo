@@ -60,7 +60,7 @@ const switchTheme = (val: boolean) => {
     overflow-y: auto;
     width: 200px;
     height: calc(100vh - 100px);
-    margin-top: 370px;
+    margin-top: 170px;
   }
 
   &__section {

@@ -1,0 +1,364 @@
+{
+  "基础": [
+    {
+      "name": "Agency",
+      "label": "pagination 分页"
+    },
+    {
+      "name": "Blog",
+      "label": "Line 线条"
+    },
+    {
+      "name": "rect",
+      "label": "Rect 矩形"
+    },
+    {
+      "name": "circle",
+      "label": "Circle 圆形"
+    },
+    {
+      "name": "image-base",
+      "label": "ImageBase 基础图片"
+    },
+    {
+      "name": "text",
+      "label": "Text 文本"
+    },
+    {
+      "name": "iframe",
+      "label": "Iframe 网页嵌套"
+    },
+    {
+      "name": "button",
+      "label": "Button 按钮"
+    },
+    {
+      "name": "drawer",
+      "label": "TDrawer 抽屉"
+    },
+    {
+      "name": "button-back",
+      "label": "ButtonBack 回退按钮"
+    },
+    {
+      "name": "button-full-screen",
+      "label": "ButtonFullScreen 全屏按钮"
+    },
+    {
+      "name": "video-base",
+      "label": "VideoBase 基础视频"
+    },
+    {
+      "name": "html",
+      "label": "HTML"
+    },
+    {
+      "name": "progress-base",
+      "label": "Progress 进度条"
+    },
+    {
+      "name": "search",
+      "label": "Search 搜索框"
+    },
+    {
+      "name": "component",
+      "label": "Component 动态组件"
+    },
+    {
+      "name": "background-box",
+      "label": "BackgroundBox 背景框"
+    },
+    {
+      "name": "gradient-text",
+      "label": "GradientText 渐变文本"
+    },
+    {
+      "name": "pagination-base",
+      "label": "PaginationBase 基础分页器"
+    }
+  ],
+  "布局": [
+    {
+      "name": "header-base",
+      "label": "HeaderBase 顶栏"
+    },
+    {
+      "name": "header-tabs",
+      "label": "HeaderTabs 导航可切换顶栏"
+    }
+  ],
+  "卡片": [
+    {
+      "name": "grid",
+      "label": "Grid 宫格"
+    },
+    {
+      "name": "quality-statistics",
+      "label": "QualityStatistics 质量统计"
+    },
+    {
+      "name": "aqi",
+      "label": "aqi"
+    },
+    {
+      "name": "compare",
+      "label": "Compare 对比组件"
+    }
+  ],
+  "导航": [
+    {
+      "name": "tabs",
+      "label": "Tabs 标签页"
+    },
+    {
+      "name": "tabs-scroll",
+      "label": "TabsScroll 滚动标签"
+    },
+    {
+      "name": "menu",
+      "label": "Menu 菜单"
+    },
+    {
+      "name": "breadcrumb-base",
+      "label": "BreadcrumbBase 基础面包屑"
+    },
+    {
+      "name": "tabs-base",
+      "label": "TabsBase 基础标签页"
+    },
+    {
+      "name": "tabs-vertical-icon",
+      "label": "TabsVerticalIcon 带图标的纵向选项卡"
+    },
+    {
+      "name": "steps",
+      "label": "Steps 步骤条"
+    },
+    {
+      "name": "steps-base",
+      "label": "StepsBase 基础步骤条"
+    }
+  ],
+  "标题": [
+    {
+      "name": "title",
+      "label": "Title 标题"
+    }
+  ],
+  "表单": [
+    {
+      "name": "input",
+      "label": "Input 输入框"
+    },
+    {
+      "name": "select",
+      "label": "Select 选择器"
+    },
+    {
+      "name": "radio",
+      "label": "Radio 单选框"
+    },
+    {
+      "name": "date-picker",
+      "label": "DatePicker 日期选择器"
+    }
+  ],
+  "列表": [
+    {
+      "name": "list",
+      "label": "List 列表"
+    },
+    {
+      "name": "list-query",
+      "label": "搜索列表"
+    }
+  ],
+  "表格": [
+    {
+      "name": "table",
+      "label": "Table 表格"
+    }
+  ],
+  "图表": [
+    {
+      "name": "chart-pie-doughnut-data",
+      "label": "ChartPieDoughnutData 甜甜圈饼图"
+    },
+    {
+      "name": "chart-bar-base",
+      "label": "ChartBarBase 基础柱状图"
+    },
+    {
+      "name": "chart-liquidfill-base",
+      "label": "ChartLiquidfillBase 水波球图"
+    },
+    {
+      "name": "chart-line-base",
+      "label": "ChartLineBase 基础折线图"
+    },
+    {
+      "name": "chart-pie-base",
+      "label": "ChartPieBase 基础饼图"
+    },
+    {
+      "name": "chart-pie-ring",
+      "label": "ChartPieRing 环形饼图"
+    },
+    {
+      "name": "chart-pie-percent",
+      "label": "ChartPiePercent 单值百分比饼图"
+    },
+    {
+      "name": "chart-design",
+      "label": "ChartDesign 自定义Echarts图"
+    },
+    {
+      "name": "chart-word-cloud",
+      "label": "ChartWordColud 词云"
+    },
+    {
+      "name": "chart-line-area",
+      "label": "ChartLineArea 基础面积图"
+    },
+    {
+      "name": "chart-line-simple",
+      "label": "ChartLineSimple 简单折线图"
+    },
+    {
+      "name": "chart-radar",
+      "label": "ChartRadar 基础雷达图"
+    },
+    {
+      "name": "chart-bar-horizontal",
+      "label": "ChartBarHorizontal 基础条形图"
+    },
+    {
+      "name": "chart-stacked-column",
+      "label": "chartStackedColumn 堆叠柱状图"
+    },
+    {
+      "name": "chart-dashboard",
+      "label": "ChartDashboard 仪表盘"
+    },
+    {
+      "name": "chart-bar-stacked",
+      "label": "ChartBarStacked 基础堆叠柱状图"
+    },
+    {
+      "name": "chart-tower-diagram",
+      "label": "ChartTowerDiagram 塔状图"
+    },
+    {
+      "name": "chart-transverse",
+      "label": "ChartTransverse 横向柱状图"
+    },
+    {
+      "name": "chart-curve",
+      "label": "ChartCurve 曲线图"
+    },
+    {
+      "name": "chart-curve-card",
+      "label": "ChartCurveCard 曲线卡片图"
+    },
+    {
+      "name": "chart-scatter-base",
+      "label": "ChartScatterBase 基础散点图"
+    },
+    {
+      "name": "chart-bar-3d",
+      "label": "ChartBar3d 3D柱状图"
+    },
+    {
+      "name": "chart-heatmap-base",
+      "label": "ChartHeatmapBase 基础热力图"
+    },
+    {
+      "name": "chart-bar-3d-cylindrical",
+      "label": "ChartBar3DCylindrical 3D圆形柱状图"
+    },
+    {
+      "name": "chart-bar-capsule",
+      "label": "ChartBarCapsule 垂直胶囊柱图"
+    },
+    {
+      "name": "chart-pie-3d",
+      "label": "ChartPie3d 3D饼图"
+    },
+    {
+      "name": "chart-type-treemap",
+      "label": "ChartTypeTreeMap 矩形树图"
+    },
+    {
+      "name": "chart-rose",
+      "label": "ChartRose 玫瑰图"
+    },
+    {
+      "name": "chart-excellent-rate",
+      "label": "ChartExcellentRate 优良率"
+    },
+    {
+      "name": "chart-bar-simple",
+      "label": "ChartBarSimple 简单柱图"
+    },
+    {
+      "name": "chart-pie-doughnut",
+      "label": "ChartPieDoughnut echarts甜甜圈饼图"
+    },
+    {
+      "name": "chart-liquidfill",
+      "label": "ChartLiquidFill 水波球图"
+    },
+    {
+      "name": "chart-line-single",
+      "label": "ChartLineSingle基础折线图"
+    }
+  ],
+  "数据展示": [
+    {
+      "name": "carousel-text",
+      "label": "CarouselText 文字走马灯"
+    },
+    {
+      "name": "swiper-base",
+      "label": "Swiper 轮播"
+    },
+    {
+      "name": "rolling-number",
+      "label": "RollingNumber 数字翻牌器"
+    },
+    {
+      "name": "timer",
+      "label": "Timer 时间器"
+    },
+    {
+      "name": "tree",
+      "label": "Tree 树形控件"
+    },
+    {
+      "name": "timeline",
+      "label": "Timeline 时间线"
+    },
+    {
+      "name": "timeline-base",
+      "label": "TimelineBase 时间轴"
+    }
+  ],
+  "其他": [
+    {
+      "name": "back-top",
+      "label": "Backtop 回到顶部"
+    }
+  ],
+  "地图": [
+    {
+      "name": "chart-map-base",
+      "label": "ChartMapBase 基础地图"
+    }
+  ],
+  "业务": [
+    {
+      "name": "background-animation",
+      "label": "BackgroundAnimation 背景动画"
+    }
+  ]
+}

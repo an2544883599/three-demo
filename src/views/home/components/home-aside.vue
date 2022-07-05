@@ -19,7 +19,7 @@
             v-for="sitem in item.children"
             :key="sitem.label"
             :index="sitem.name"
-            :route="{path:'Agency', query:{name:sitem.name}}"
+            :route="{path:sitem.href, query:{name:sitem.name}}"
           >
             {{ sitem.label }}
           </el-menu-item>
@@ -34,25 +34,14 @@
 import { computed, reactive } from 'vue';
 import { useRoute } from 'vue-router';
 import { RouteList, ListJson } from './home-aside';
-import routeLists from '@/assets/json/components.json';
+import { routeLists } from '@/assets/static-route/route';
 
 const route = useRoute();
 // 根据路由控制导航默认选中
 const selectItem = computed(() => route.query?.name as string);
 
-const routeList: Array<RouteList> = reactive([]);
+const routeList: Array<RouteList> = reactive([...routeLists]);
 
-// 处理json格式
-const changeJson = (list: ListJson) => {
-  const res = Object.entries(list);
-  res.forEach((item) => {
-    routeList.push({
-      label: item[0],
-      children: item[1],
-    });
-  });
-};
-changeJson(routeLists);
 </script>
 
 <style lang="scss" scoped>

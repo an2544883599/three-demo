@@ -13,6 +13,16 @@ export const routeLists = [
         label: '第二节',
         name: 'two',
         href: '/two'
+      },
+      {
+        label: '物体位移和父子元素',
+        name: 'three',
+        href: '/three'
+      },
+      {
+        label: '物体缩放与旋转',
+        name: 'four',
+        href: '/four'
       }
     ],
   }

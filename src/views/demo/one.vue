@@ -1,13 +1,18 @@
+<!--
+ * @@file: 
+ * @@Author: Wu Jie <wujie08@baidu.com>
+ * @@Date: Do not edit
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2025-01-15 09:59:39
+-->
 <template>
   <main class="agency" ref="body">
   </main>
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
 import { ref, onMounted, nextTick } from 'vue';
 import * as THREE from 'three';
-import { log } from 'console';
 
 const body = ref();
 const init = () => {
@@ -31,7 +36,6 @@ const init = () => {
     renderer.render( scene, camera );
   }
   animate();
-  
 }
 
 onMounted(() => {

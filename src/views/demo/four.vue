@@ -1,5 +1,5 @@
 <!--
- * @@file: 
+ * @@file:
  * @@Author: Wu Jie <wujie08@baidu.com>
  * @@Date: Do not edit
  * @LastEditors: Please set LastEditors
@@ -33,7 +33,7 @@ const init = () => {
     // 创建轨道控制器
     const controls = new OrbitControls(camera.value, renderer.value.domElement);
     // 设置控制器阻尼
-    controls.enableDamping = true;
+    controls.enableDamping = false;
     // 设置阻尼系数
     controls.dampingFactor = 0.25;
 
@@ -41,7 +41,7 @@ const init = () => {
     body.value.appendChild(renderer.value.domElement);
 
     // 创建几何体
-    const geometry = new THREE.BoxGeometry();
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
     // 创建材质
     const material = new THREE.MeshBasicMaterial({ color: '#0f7e15' });
     // 创建网格
@@ -50,10 +50,12 @@ const init = () => {
     scene.add(cube);
     // 设置相机的位置
     camera.value.position.z = 5;
-    camera.value.position.y = 1;
-    camera.value.position.x = 1;
-    camera.value.lookAt(1, 0, 0);
-
+    camera.value.position.x = 3;
+    // camera.value.lookAt(1, 0, 0);
+    cube.position.set(2, 0, 0);
+    cube.scale.set(2, 1, 2);
+    // 绕着X轴旋转
+    cube.rotation.x = Math.PI / 4;
     // 添加世界坐标辅助器
     const axesHelper = new THREE.AxesHelper(5);
     scene.add(axesHelper);
@@ -63,9 +65,6 @@ const init = () => {
         controls.update();
         // 递归调用动画函数
         requestAnimationFrame(animate);
-        // 更新立方体的旋转
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
         // 渲染场景和相机
         renderer.value.render(scene, camera.value);
     }

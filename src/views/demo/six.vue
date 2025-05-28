@@ -1,5 +1,5 @@
 <!--
- * @@file: 
+ * @@file:
  * @@Author: Wu Jie <wujie08@baidu.com>
  * @@Date: Do not edit
  * @LastEditors: Please set LastEditors
@@ -14,6 +14,8 @@ import { ref, onMounted, nextTick, render, onBeforeUnmount } from 'vue';
 import * as THREE from 'three';
 // 导入轨道控制器
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+// 导入lil.gui
+import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js';
 
 const body = ref();
 const camera = ref();
@@ -33,7 +35,7 @@ const init = () => {
     // 创建轨道控制器
     const controls = new OrbitControls(camera.value, renderer.value.domElement);
     // 设置控制器阻尼
-    controls.enableDamping = true;
+    controls.enableDamping = false;
     // 设置阻尼系数
     controls.dampingFactor = 0.25;
 
@@ -41,21 +43,23 @@ const init = () => {
     body.value.appendChild(renderer.value.domElement);
 
     // 创建几何体
-    const geometry = new THREE.BoxGeometry();
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
     // 创建材质
     const material = new THREE.MeshBasicMaterial({ color: '#0f7e15' });
+    // 设置线框模式
+    material.wireframe = true;
     // 创建网格
     const cube = new THREE.Mesh(geometry, material);
     // 将网格添加到场景中
     scene.add(cube);
     // 设置相机的位置
-    // camera.value.position.z = 5;
-    // camera.value.position.y = 1;
-    // camera.value.position.x = 1;
-    cube.position.set(5,5,5);
-    camera.value.position.set(10,5,5);
-    // camera.value.lookAt(50, 50, 200);
-
+    camera.value.position.z = 5;
+    camera.value.position.x = 3;
+    // camera.value.lookAt(1, 0, 0);
+    cube.position.set(2, 0, 0);
+    cube.scale.set(1, 1, 1);
+    // 绕着X轴旋转
+    cube.rotation.x = Math.PI / 4;
     // 添加世界坐标辅助器
     const axesHelper = new THREE.AxesHelper(5);
     scene.add(axesHelper);
@@ -65,14 +69,37 @@ const init = () => {
         controls.update();
         // 递归调用动画函数
         requestAnimationFrame(animate);
-        // 更新立方体的旋转
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
         // 渲染场景和相机
         renderer.value.render(scene, camera.value);
     }
     // 开始动画
     animate();
+
+    const eventObj = {
+        Fullscreen: () => {
+            body.value.requestFullscreen();
+        },
+        exitFullscreen: () => {
+            document.exitFullscreen();
+        },
+        color: '#0f7e15',
+    };
+
+    // 创建GUI
+    const gui = new GUI();
+    // 添加按钮
+    gui.add(eventObj, 'Fullscreen').name('全屏');
+    gui.add(eventObj, 'exitFullscreen').name('退出全屏');
+    // 控制立方体的位置
+    // gui.add(cube.position, 'x', -10, 10).name('x轴坐标');
+    const folder = gui.addFolder('立方体位置');
+    folder.add(cube.position, 'x').min(-10).max(10).step(1).name('x轴坐标');
+    folder.add(cube.position, 'y', -10, 10).name('y轴坐标');
+    folder.add(cube.position, 'z', -10, 10).name('z轴坐标');
+    gui.add(material, 'wireframe').name('线框模式');
+    gui.addColor(eventObj, 'color').name('立方体颜色').onChange((val: any) => {
+        cube.material.color.set(val);
+    });
 };
 
 /**
@@ -87,14 +114,14 @@ const updateSize = () => {
     camera.value.updateProjectionMatrix();
     // 更新渲染器的大小
     renderer.value.setSize(body.value.clientWidth, body.value.clientHeight);
+    //   设置渲染器的像素比
+    // renderer.value.setPixelRatio(window.devicePixelRatio);
 };
 
 onMounted(() => {
-    nextTick(() => {
-        init();
-        // 监听窗口变化
-        window.addEventListener('resize', updateSize);
-    });
+    init();
+    // 监听窗口变化
+    window.addEventListener('resize', updateSize);
 });
 
 onBeforeUnmount(() => {

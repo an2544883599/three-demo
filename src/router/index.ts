@@ -30,6 +30,31 @@ const routes: RouteRecordRaw[] = [
         name: 'four',
         component: () => import('@/views/demo/four.vue'),
       },
+      {
+        path: '/five',
+        name: 'five',
+        component: () => import('@/views/demo/five.vue'),
+      },
+      {
+        path: '/six',
+        name: 'six',
+        component: () => import('@/views/demo/six.vue'),
+      },
+      {
+        path: '/seven',
+        name: 'seven',
+        component: () => import('@/views/demo/seven.vue'),
+      },
+      {
+        path: '/eight',
+        name: 'eight',
+        component: () => import('@/views/demo/eight.vue'),
+      },
+      {
+        path: '/nine',
+        name: 'nine',
+        component: () => import('@/views/demo/nine.vue'),
+      },
     ],
   },
 ];

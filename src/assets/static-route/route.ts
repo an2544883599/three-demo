@@ -23,7 +23,32 @@ export const routeLists = [
         label: '物体缩放与旋转',
         name: 'four',
         href: '/four'
-      }
+      },
+      {
+        label: '响应式画布和全屏',
+        name: 'five',
+        href: '/five'
+      },
+      {
+        label: 'GUI',
+        name: 'six',
+        href: '/six'
+      },
+      {
+        label: '几何面',
+        name: 'seven',
+        href: '/seven'
+      },
+      {
+        label: '光源',
+        name: 'eight',
+        href: '/eight'
+      },
+      {
+        label: '贴图',
+        name: 'nine',
+        href: '/nine'
+      },
     ],
   }
 ]

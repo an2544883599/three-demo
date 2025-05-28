@@ -40,21 +40,20 @@ const init = () => {
     // 将渲染器的DOM元素添加到页面中
     body.value.appendChild(renderer.value.domElement);
 
-    // 创建几何体
-    const geometry = new THREE.BoxGeometry();
-    // 创建材质
-    const material = new THREE.MeshBasicMaterial({ color: '#0f7e15' });
-    // 创建网格
-    const cube = new THREE.Mesh(geometry, material);
-    // 将网格添加到场景中
-    scene.add(cube);
-    // 设置相机的位置
-    // camera.value.position.z = 5;
-    // camera.value.position.y = 1;
-    // camera.value.position.x = 1;
-    cube.position.set(5,5,5);
-    camera.value.position.set(10,5,5);
-    // camera.value.lookAt(50, 50, 200);
+    // 创建纹理加载器
+    const textureLoader = new THREE.TextureLoader();
+    // 加载纹理
+    const texture = textureLoader.load('./tietu.jpg');
+    // 创建平面几何体
+    const planeGeometry = new THREE.PlaneGeometry(2, 2);
+    // 创建平面材质
+    const planeMaterial = new THREE.MeshBasicMaterial({ map: texture });
+    // 允许透明
+    planeMaterial.transparent = true;
+    const planeCube = new THREE.Mesh(planeGeometry, planeMaterial);
+    scene.add(planeCube);
+
+    camera.value.position.set(5,5,5);
 
     // 添加世界坐标辅助器
     const axesHelper = new THREE.AxesHelper(5);
@@ -66,8 +65,8 @@ const init = () => {
         // 递归调用动画函数
         requestAnimationFrame(animate);
         // 更新立方体的旋转
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+        // cube.rotation.x += 0.01;
+        // cube.rotation.y += 0.01;
         // 渲染场景和相机
         renderer.value.render(scene, camera.value);
     }

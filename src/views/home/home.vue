@@ -58,14 +58,15 @@ const switchTheme = (val: boolean) => {
     top: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-    width: 200px;
+    flex: 0 0 200px;
     height: calc(100vh - 100px);
-    margin-top: 170px;
+    // margin-top: 170px;
   }
 
   &__section {
     flex: 1;
     padding-top: 80px;
+    border: 1px solid red;
   }
 }
 </style>
